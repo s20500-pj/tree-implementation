@@ -16,16 +16,6 @@ public class ConfierTree extends Tree {
         super(name, treeTrunk, height, root);
     }
 
-    public ConfierTree(String name, List<Branch> branchList, long treeTrunk, long height, long root) {
-        super(name, branchList, treeTrunk, height, root);
-    }
-
-    public ConfierTree(String name, List<Branch> branchList, long treeTrunk, long height, long root, List<WoodyCones> woodyConesList) {
-        super(name, branchList, treeTrunk, height, root);
-        this.woodyConesList = woodyConesList;
-    }
-
-
     @Override
     public void grow() {
 
