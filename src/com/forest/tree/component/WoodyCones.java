@@ -1,17 +1,19 @@
 package com.forest.tree.component;
 
-public class WoodyCones {
-    long size;
+import com.forest.tree.TreeComponent;
 
-    public WoodyCones(long size) {
-        this.size = size;
+public class WoodyCones extends TreeComponent {
+
+    private String type;
+
+    public WoodyCones() {
     }
 
-    public long getSize() {
-        return size;
+    public String getType() {
+        return type;
     }
 
-    public void setSize(long size) {
-        this.size = size;
+    public void setType(String type) {
+        this.type = type;
     }
 }

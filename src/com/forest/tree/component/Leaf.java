@@ -1,7 +1,12 @@
 package com.forest.tree.component;
 
-public class Leaf {
+import com.forest.tree.TreeComponent;
+
+public class Leaf extends TreeComponent {
     private String color;
+
+    public Leaf() {
+    }
 
     public Leaf(String color) {
         this.color = color;
@@ -13,5 +18,10 @@ public class Leaf {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public void displayColor() {
+        System.out.println("Color of this leaf is " + getColor());
     }
 }

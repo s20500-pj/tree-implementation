@@ -1,12 +1,15 @@
 package com.forest.tree.component;
 
-public class Fruit {
-    String color;
-    long size;
+import com.forest.tree.TreeComponent;
 
-    public Fruit(String color, long size) {
+public class Fruit extends TreeComponent {
+    private String color;
+
+    public Fruit() {
+    }
+
+    public Fruit(String color) {
         this.color = color;
-        this.size = size;
     }
 
     public String getColor() {
@@ -17,11 +20,8 @@ public class Fruit {
         this.color = color;
     }
 
-    public long getSize() {
-        return size;
-    }
-
-    public void setSize(long size) {
-        this.size = size;
+    @Override
+    public void displayColor() {
+        System.out.println("Color of this fruit is " + getColor());
     }
 }
