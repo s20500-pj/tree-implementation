@@ -1,5 +1,7 @@
 package com.forest.tree;
 
+import java.util.Set;
+
 public interface TreeInterface {
     void grow(long x);
 
@@ -8,4 +10,8 @@ public interface TreeInterface {
     void remove(TreeComponent newTreeComponent);
 
     void displayColor();
+
+    Set<TreeComponent> getTreeComponents();
+
+    void setTreeComponents();
 }

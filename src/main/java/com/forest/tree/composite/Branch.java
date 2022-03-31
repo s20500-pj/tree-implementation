@@ -12,6 +12,14 @@ public class Branch extends TreeComponent {
         super();
     }
 
+    public Set<TreeComponent> getTreeComponents() {
+        return treeComponents;
+    }
+
+    public void setTreeComponents(Set<TreeComponent> treeComponents) {
+        this.treeComponents = treeComponents;
+    }
+
     public void add(TreeComponent newTreeComponent) {
         if (newTreeComponent == null) throw new IllegalArgumentException("TreeComponent cant be null.");
         treeComponents.add(newTreeComponent);

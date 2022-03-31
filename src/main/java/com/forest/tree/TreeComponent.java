@@ -1,5 +1,7 @@
 package com.forest.tree;
 
+import java.util.Set;
+
 public abstract class TreeComponent implements TreeInterface {
     private long size;
 
@@ -20,11 +22,19 @@ public abstract class TreeComponent implements TreeInterface {
     public void displayColor() {
         throw new UnsupportedOperationException();
     }
+    @Override
+    public Set<TreeComponent> getTreeComponents(){
+        throw new UnsupportedOperationException();
+    }
+    @Override
+    public void setTreeComponents(){
+        throw new UnsupportedOperationException();
+    }
 
     @Override
     public void grow(long x) {
-        if ((size += x) < 0) throw new IllegalArgumentException("Size cant be negative.");
-        size += x;
+        if  (x < 0) throw new IllegalArgumentException("Size cant be negative.");
+        this.size += x;
     }
 
     public TreeComponent(long size) {
